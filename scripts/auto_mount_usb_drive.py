@@ -39,7 +39,7 @@ while True:
 
             try:
                 os.makedirs(mount_point, exist_ok=True)
-                subprocess.run(['mount', device_path, mount_point], check=True)
+                subprocess.run(['mount', '-o', 'umask=000,dmask=000', device_path, mount_point], check=True)
                 print(f"Mounted {device_path} at {mount_point}")
                 write_string_to_file(fname="/tmp/usb_device_path", s=mount_point)
             except subprocess.CalledProcessError as e:
