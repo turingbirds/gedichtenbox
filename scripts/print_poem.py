@@ -138,6 +138,6 @@ poem_author = lines[1]
 poem_lines = lines[2:]
 
 # the header and  footer image should be 576 px wide
-create_image_with_text(poem_lines, '', 576, '../fig/footer.png', poem_title=poem_title, poem_author=poem_author)
+create_image_with_text(poem_lines, '', 576, '../fig/header.png', '../fig/footer.png', poem_title=poem_title, poem_author=poem_author)
 
 do_print("output_image.png")
