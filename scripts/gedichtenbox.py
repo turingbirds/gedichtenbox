@@ -13,6 +13,7 @@ from adafruit_pca9685 import PCA9685
 import RPi.GPIO as GPIO
 import os
 import time
+import csv
 import sys
 
 
@@ -97,6 +98,31 @@ for language in languages:
 
 
 #
+# 	read statistics file if there is one
+#
+
+def read_csv_to_dict(filename):
+    with open(filename, mode='r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        return {rows[0]: int(rows[1]) for rows in reader}
+
+def write_dict_to_csv(data, filename):
+	with open(filename, mode='w', newline='', encoding='utf-8') as file:
+		writer = csv.writer(file)
+		for key, value in data.items():
+			writer.writerow([key, value])
+
+initial_statistics = {language: 0 for language in languages}
+statistics_absolute_fname = os.path.join(usb_device_path, 'statistics.csv')
+
+try:
+	statistics = read_csv_to_dict(statistics_absolute_fname)
+except:
+	write_dict_to_csv(initial_statistics, statistics_absolute_fname)
+	statistics = initial_statistics.copy()
+
+
+#
 # 	paper feed motor off
 #
 
@@ -153,6 +179,10 @@ while True:
 		state = STATE_PRINTING
 		print("Printing: " + str(language))
 		time_of_last_print = time.time()
+
+		# update stats
+		statistics[language] += 1
+		write_dict_to_csv(statistics, statistics_absolute_fname)
 
 		# turn on paper feed motors
 		pca.channels[3].duty_cycle = max_duty
