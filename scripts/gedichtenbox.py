@@ -34,7 +34,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
 pca = PCA9685(i2c, address=0x41)
 pca.frequency = 1000
 max_duty = 0xFFFF
-cutter_servo_min_duty = 35000
+cutter_servo_min_duty = 30000
 cutter_servo_max_duty = 65000
 init_duty = [0, max_duty // 3, 2 * max_duty // 3]
 duty = init_duty.copy()
