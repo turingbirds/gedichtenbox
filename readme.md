@@ -85,11 +85,19 @@ Place the new roll in the holder. Make sure it's the right way around (the therm
 
 ![Picture of roll in the holder](https://github.com/turingbirds/gedichtenbox/blob/main/fig/paper_roll_holder.jpg?raw=true)
 
-By hand, feed the end of the paper into the printer. You can make a few folds in the paper to make it easier to get the right angle.
+By hand, feed the end of the paper into the printer. This can be a bit tricky; to make it easier, make a fold in the paper to get the right angle:
+
+![Picture of making a fold in the paper](https://github.com/turingbirds/gedichtenbox/blob/main/fig/paper_prep.jpg?raw=true)
+
+Additionally, to make it easier for the printer to grab onto the paper, you can make it more pointy by cutting off two corners with scissors:
+
+![Picture of cutting off two corners of the paper](https://github.com/turingbirds/gedichtenbox/blob/main/fig/paper_prep2.jpg?raw=true)
+
+Then, while holding the paper (straight!) into the printer, as indicated by the arrows:
 
 ![Picture of paper inserted into the printer](https://github.com/turingbirds/gedichtenbox/blob/main/fig/paper_inserted.jpg?raw=true)
 
-While holding the paper (straight!) into the printer, press the "feed paper" button until the paper roller in the printer latches on to it. Do not press feed longer than necessary, otherwise there will be a paper jam!
+Press the "feed paper" button until the paper roller in the printer latches on to it. Do not press feed longer than necessary, otherwise there will be a paper jam!
 
 ![Picture of the paper feed button](https://github.com/turingbirds/gedichtenbox/blob/main/fig/paper_feed_button.jpg?raw=true)
 
